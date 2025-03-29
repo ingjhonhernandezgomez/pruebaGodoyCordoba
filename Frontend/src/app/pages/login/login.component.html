@@ -1,0 +1,19 @@
+<div class="login-container">
+    <div class="login-box">
+      <img src="assets/logo.png" alt="Godoy Córdoba | Littler" class="logo" />
+      <h2>Ingreso a la Plataforma</h2>
+  
+      <form (submit)="login()">
+        <input type="email" [(ngModel)]="correo" placeholder="Correo electrónico" name="correo" required />
+        <input type="password" [(ngModel)]="clave" placeholder="Contraseña" name="clave" required />
+        <button [disabled]="cargando" type="submit">Ingresar</button>
+      </form>
+  
+      <p *ngIf="error" class="error-msg">
+        ⚠️ {{ error }}
+      </p>
+
+      <app-loader *ngIf="cargando" mensaje="Cargando usuarios..."></app-loader>
+    </div>
+
+  </div>

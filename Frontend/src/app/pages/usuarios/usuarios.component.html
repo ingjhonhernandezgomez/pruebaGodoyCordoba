@@ -1,0 +1,49 @@
+<h2>Gestión de Usuarios</h2>
+
+<form (submit)="guardar(); $event.preventDefault()" class="formulario">
+  <input [(ngModel)]="nuevo.nombre" name="nombre" placeholder="Nombre" required />
+  <input [(ngModel)]="nuevo.apellidos" name="apellidos" placeholder="Apellidos" required />
+  <input [(ngModel)]="nuevo.cedula" name="cedula" placeholder="Cédula" required />
+  <input [(ngModel)]="nuevo.correoElectronico" name="correoElectronico" placeholder="Correo" required />
+  <input [(ngModel)]="nuevo.clave" name="clave" placeholder="Contraseña" required />
+  <button [disabled]="cargando" type="submit">{{ editando ? 'Actualizar' : 'Crear' }}</button>
+  <button [disabled]="cargando" type="button" *ngIf="editando" (click)="cancelar()">Cancelar</button>
+</form>
+
+<div *ngIf="mensaje" class="alert success">✅ {{ mensaje }}</div>
+<div *ngIf="error" class="alert error">⚠️ {{ error }}</div>
+
+<table border="1" cellpadding="5" class="tabla">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Último Acceso</th>
+      <th>Clasificación</th>
+      <th>Puntaje</th>
+      <th>Clave</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of usuarios">
+      <td>{{ u.nombre }} {{ u.apellidos }}</td>
+      <td>{{ u.correoElectronico }}</td>
+      <td>{{ u.fechaUltimoAcceso | date:'dd/MM/yyyy HH:mm' }}</td>
+      <td>{{ getClasificacion(u.fechaUltimoAcceso) }}</td>
+      <td>{{ u.puntaje }}</td>
+      <td>{{ u.clave }}</td>
+      <td>
+        <button [disabled]="cargando" (click)="editar(u)">Editar</button>
+        <button [disabled]="cargando" (click)="eliminar(u.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div style="text-align: right; margin-bottom: 10px;">
+    <button [disabled]="cargando" (click)="logout()">Cerrar sesión</button>
+</div>
+
+<app-loader *ngIf="cargando" mensaje="Cargando..."></app-loader>
+
+
