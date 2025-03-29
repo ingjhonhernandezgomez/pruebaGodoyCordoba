@@ -1,0 +1,97 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "PruebaUsuarios.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/PruebaUsuarios.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PruebaUsuarios.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PruebaUsuarios.Domain/1.0.0": {
+      "type": "project",
+      "path": "../PruebaUsuarios.Domain/PruebaUsuarios.Domain.csproj",
+      "msbuildProject": "../PruebaUsuarios.Domain/PruebaUsuarios.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "PruebaUsuarios.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\junio\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\junio\\source\\repos\\Prueba-Godoy-Cordoba\\Backend\\PruebaUsuarios.Application\\PruebaUsuarios.Application.csproj",
+      "projectName": "PruebaUsuarios.Application",
+      "projectPath": "C:\\Users\\junio\\source\\repos\\Prueba-Godoy-Cordoba\\Backend\\PruebaUsuarios.Application\\PruebaUsuarios.Application.csproj",
+      "packagesPath": "C:\\Users\\junio\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\junio\\source\\repos\\Prueba-Godoy-Cordoba\\Backend\\PruebaUsuarios.Application\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\junio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "C:\\Users\\junio\\source\\repos\\Prueba-Godoy-Cordoba\\Backend\\PruebaUsuarios.Domain\\PruebaUsuarios.Domain.csproj": {
+              "projectPath": "C:\\Users\\junio\\source\\repos\\Prueba-Godoy-Cordoba\\Backend\\PruebaUsuarios.Domain\\PruebaUsuarios.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
